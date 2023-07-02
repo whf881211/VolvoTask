@@ -39,7 +39,7 @@ class Store: ObservableObject {
     ///   - action: 当前动作
     /// - Returns: - state: 新的appState; - appCommand:
     static func reduce(state: AppState, action: AppAction) -> (AppState, AppCommand?) {
-        var curState = state
+        let curState = state
         var command: AppCommand? = nil
         curState.error = nil
         curState.displayAlert = false
